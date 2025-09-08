@@ -1,0 +1,196 @@
+/* ========= Base ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #f0fdfa);
+    color: #222;
+    transition: background 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========= Dark Mode ========== */
+body.dark-mode {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f1f5f9;
+}
+
+/* ========= Toggle Button ========== */
+.right-align {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.2em 2em;
+}
+
+.toggle-btn {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .toggle-btn {
+    background: rgba(30, 41, 59, 0.6);
+    color: #f1f5f9;
+    border-color: #475569;
+}
+
+.toggle-btn:hover {
+    background-color: #dbeafe;
+}
+
+/* ========= Hero Section ========= */
+.box1 {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 2.5em;
+    max-width: 800px;
+    margin: 1.5em 1em;
+    text-align: center;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .box1 {
+    background: rgba(30, 41, 59, 0.4);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
+}
+
+/* ========= Typography ========= */
+h1 {
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 0.3em;
+}
+
+h2 {
+    font-weight: 400;
+    color: #475569;
+    font-size: 1.2rem;
+}
+
+body.dark-mode h1 {
+    color: #93c5fd;
+}
+
+body.dark-mode h2 {
+    color: #cbd5e1;
+}
+
+/* ========= Form ========= */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 2em;
+    width: 100%;
+}
+
+input[type="url"] {
+    width: 80%;
+    max-width: 600px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background-color: #ffffffc9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="url"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    outline: none;
+}
+
+body.dark-mode input[type="url"] {
+    background-color: rgba(51, 65, 85, 0.6);
+    border-color: #64748b;
+    color: #f1f5f9;
+}
+
+/* ========= Submit Button ========= */
+input[type="submit"] {
+    padding: 14px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* ========= Output Label ========= */
+#outputLabel {
+    display: block;
+    margin-top: 2em;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    padding: 1.5em;
+    border-radius: 14px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: background 0.3s ease;
+}
+
+body.dark-mode #outputLabel {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: #475569;
+}
+
+/* ========= Error ========= */
+.error {
+    color: #dc2626;
+    font-size: 0.95rem;
+    margin-top: -1em;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 640px) {
+    input[type="url"] {
+        width: 95%;
+    }
+
+    .box1 {
+        margin: 1em;
+        padding: 1.8em;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}

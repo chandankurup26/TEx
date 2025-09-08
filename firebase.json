@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "C:\\Users\\stars\\Desktop\\TEx (Text Extractor)",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

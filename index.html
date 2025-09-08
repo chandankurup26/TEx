@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="right-align">
+        <button id="modeToggle" class="toggle-btn" onclick="toggleDarkMode()">Dark Mode 🌙</button>
+    </div>
+    <div class="box1">
+        <h1 class="center-text">TEx</h1>
+        <h2 class="center-text">Instantly Extract Clean Text from A Website</h2>
+    </div>
+    <div class="center-text">
+        <form id="websiteForm">
+            <label for="website">Website URL:</label>
+            <input type="url"
+               id="website"
+               name="website"
+               placeholder="https://example.com"
+               required>
+            <span class="error" id="websiteError"></span>
+            <input type="submit" value="Extract" onclick="displayMessage()">
+        </form>
+    </div>
+    <div class="box1">
+        <label id="outputLabel"></label>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
