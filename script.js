@@ -27,22 +27,3 @@ window.onload = function () {
         button.textContent = "Dark Mode🌙";
     }
 };
-
-fetch("https://REGION-PROJECT.cloudfunctions.net/extractText", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ website: websiteInput })
-})
-.then(response => response.json())
-.then(data => {
-    if (data.cleaned_text) {
-        outputLabel.textContent = data.cleaned_text;
-    } else {
-        outputLabel.textContent = "Error: " + data.error;
-    }
-})
-.catch(error => {
-    outputLabel.textContent = "An error occurred: " + error;
-});
