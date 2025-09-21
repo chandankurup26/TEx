@@ -7,13 +7,13 @@
 </head>
 <body>
     <div class="right-align">
-        <button id="modeToggle" class="toggle-btn" onclick="toggleDarkMode()">Dark Mode 🌙</button>
+        <button id="modeToggle" class="toggle-btn" onclick="toggleDarkMode()">Dark Mode 🌑</button>
     </div>
     <div class="box1">
-        <h1 class="center-text">TEx</h1>
-        <h2 class="center-text">Instantly Extract Clean Text from A Website</h2>
+        <h1 class="center-align">TEx</h1>
+        <h2 class="center-align">Instantly Extract Clean Text from A Website</h2>
     </div>
-    <div class="center-text">
+    <div class="center-align">
         <form id="websiteForm">
             <label for="website">Website URL:</label>
             <input type="url"
@@ -25,9 +25,13 @@
             <input type="submit" value="Extract" onclick="displayMessage()">
         </form>
     </div>
-    <div class="box1">
+    <div class="box2">
         <label id="outputLabel"></label>
     </div>
+    <div class="center-align">
+        <button id="copytext" class="toggle-btn" onclick="copyText()">Copy Text To Clipboard 📋</button>
+    </div>
+    <div id="copyMessage" class="copy-msg"></div>
     <script src="script.js"></script>
 </body>
 </html>
