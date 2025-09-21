@@ -27,3 +27,26 @@ window.onload = function () {
         button.textContent = "Dark Mode🌙";
     }
 };
+
+function copyText() {
+    const text = document.getElementById("outputLabel").textContent;
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            showInlineMessage("Copied!");
+        })
+        .catch(err => {
+            console.error("Failed to copy text: ", err);
+            showInlineMessage("Failed to copy");
+        });
+}
+
+function showInlineMessage(message) {
+    const msgSpan = document.getElementById("copyMessage");
+    msgSpan.textContent = message;
+    msgSpan.classList.add("show");
+    // Hide the message after 2 seconds
+    setTimeout(() => {
+        msgSpan.classList.remove("show");
+    }, 2000);
+}
