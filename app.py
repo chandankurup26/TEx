@@ -5,7 +5,7 @@ from flask_cors import CORS
 
 from bs4 import BeautifulSoup
 import requests
-from google import genai
+import google.generativeai as genai
 
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
@@ -83,3 +83,4 @@ if __name__ == '__main__':
         db.create_all()  # ensure tables are created
 
     app.run(debug=True)
+
