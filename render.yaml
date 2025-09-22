@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: flask-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    pythonVersion: 3.11.8
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: DATABASE_URL_ENV_VAR
+        sync: false
