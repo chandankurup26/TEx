@@ -60,7 +60,7 @@ function processLink() {
         return;
     }
 
-    fetch("http://localhost:5000/responses", {
+    fetch("${BACKEND_URL}/responses", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -80,4 +80,3 @@ function processLink() {
         showInlineMessage("Request failed");
     });
 }
-
