@@ -78,13 +78,3 @@ function processLink() {
         showInlineMessage("Request failed");
     });
 }
-
-// Show message under copy button
-function showInlineMessage(message) {
-    const msgElem = document.getElementById("message");
-    msgElem.textContent = message;
-
-    setTimeout(() => {
-        msgElem.textContent = "";
-    }, 2000);
-}
