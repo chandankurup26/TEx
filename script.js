@@ -1,3 +1,5 @@
+const BACKEND_URL = "https://tex-wetp.onrender.com";
+
 function toggleDarkMode() {
     const body = document.body;
     const button = document.getElementById('modeToggle');
@@ -78,3 +80,4 @@ function processLink() {
         showInlineMessage("Request failed");
     });
 }
+
