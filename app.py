@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 import requests
 from google import genai
 
+genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+
 # --- Flask and DB Setup ---
 app = Flask(__name__)
 CORS(app)  # allow frontend JS access
@@ -79,4 +81,5 @@ def get_latest_response():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # ensure tables are created
+
     app.run(debug=True)
