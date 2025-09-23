@@ -51,16 +51,22 @@ function showInlineMessage(message) {
     }, 2000);
 }
 
-function processLink() {
-    const link = document.getElementById("linkInput").value;
+function processLink(event) {
+    event.preventDefault();  // Prevent form submission
+
+    const link = document.getElementById("website").value;
     const outputLabel = document.getElementById("outputLabel");
+    const spinner = document.getElementById("spinner");
 
     if (!link) {
         showInlineMessage("Please enter a link");
         return;
     }
 
-    fetch('${BACKEND_URL}/responses', {
+    outputLabel.textContent = "";      // Clear previous output
+    spinner.style.display = "block";   // Show spinner
+
+    fetch(`${BACKEND_URL}/responses`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -72,12 +78,14 @@ function processLink() {
         if (data.output) {
             outputLabel.textContent = data.output;
         } else {
-            outputLabel.textContent = "Error: " + data.error;
+            outputLabel.textContent = "Error: " + (data.error || "Unknown error");
         }
     })
     .catch(err => {
         console.error("Error:", err);
         showInlineMessage("Request failed");
+    })
+    .finally(() => {
+        spinner.style.display = "none";  // Hide spinner when done
     });
 }
-
