@@ -43,10 +43,9 @@ def extract(url):
 
 # --- Text Cleaning Using Gemini ---
 def clean_text_with_gemini(txt):
-    client = genai.Client()
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=f"Clean the given text by removing unnecessary symbols or formatting, then convert it into a properly structured title and paragraph format: {txt}"
+    model = genai.GenerativeModel("gemini-2.5-flash")
+    response = model.generate_content(
+        f"Clean the given text by removing unnecessary symbols or formatting, then convert it into a properly structured title and paragraph format:\n\n{txt}"
     )
     return response.text
 
