@@ -60,7 +60,7 @@ function processLink() {
         return;
     }
 
-    fetch("${BACKEND_URL}/responses", {
+    fetch('${BACKEND_URL}/responses', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -80,3 +80,4 @@ function processLink() {
         showInlineMessage("Request failed");
     });
 }
+
