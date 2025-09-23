@@ -14,16 +14,17 @@
         <h2 class="center-align">Instantly Extract Clean Text from A Website</h2>
     </div>
     <div class="center-align">
-        <form id="websiteForm">
+        <form id="websiteForm" onsubmit="processLink(event)">
             <label for="website">Website URL:</label>
             <input type="url"
-               id="website"
-               name="website"
-               placeholder="https://example.com"
-               required>
+                   id="website"
+                   name="website"
+                   placeholder="https://example.com"
+                   required>
             <span class="error" id="websiteError"></span>
-            <input type="submit" value="Extract" onclick="processLink()">
+            <input type="submit" value="Extract">
         </form>
+    <div id="spinner" class="spinner" style="display: none;"></div>
     </div>
     <div class="box2">
         <label id="outputLabel"></label>
