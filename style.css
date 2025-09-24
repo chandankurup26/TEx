@@ -1,7 +1,8 @@
 .background-image {
-    background-image: url("https://github.com/chandankurup26/TEx/blob/main/background.png");
+    background-image: url("https://raw.githubusercontent.com/chandankurup26/TEx/main/background.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .right-align {
     text-align: right;
@@ -67,4 +68,3 @@ body.dark-mode button#modeToggle {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
