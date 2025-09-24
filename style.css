@@ -1,3 +1,8 @@
+.background-image {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .right-align {
     text-align: right;
 }
@@ -58,7 +63,6 @@ body.dark-mode button#modeToggle {
     animation: spin 1s linear infinite;
     margin: 20px auto;
 }
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
