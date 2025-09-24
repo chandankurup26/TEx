@@ -1,12 +1,6 @@
 .background-image {
-    background-image:
-    url("data:image/svg+xml;utf8,
-      <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>
-        <text x='0' y='12' font-size='2' font-family='sans-serif' fill='%23666'>TEx</text>
-      </svg>");
-  background-repeat: repeat;
-  background-size: 40px 40px;
-  background-color: #fdfdfd; 
+    background-image: url("https://www.pexels.com/photo/sunset-over-snow-covered-mountains-66997/");
+    background-size: cover;
 }
 .right-align {
     text-align: right;
@@ -72,4 +66,5 @@ body.dark-mode button#modeToggle {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 
