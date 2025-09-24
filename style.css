@@ -1,5 +1,5 @@
 .background-image {
-    background-image: url("https://www.pexels.com/photo/sunset-over-snow-covered-mountains-66997/");
+    background-image: url("https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg");
     background-size: cover;
 }
 .right-align {
@@ -66,5 +66,6 @@ body.dark-mode button#modeToggle {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 
 
