@@ -1,5 +1,5 @@
 .background-image {
-    background-image: url("background.jpg");
+    background-image: url("https://github.com/chandankurup26/TEx/blob/main/background.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -67,3 +67,4 @@ body.dark-mode button#modeToggle {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
