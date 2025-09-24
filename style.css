@@ -4,6 +4,7 @@ body.background-image {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  min-height: 100vh;
 }
 body.background-image::before {
   content: "";
@@ -83,6 +84,7 @@ body.dark-mode button#modeToggle {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 
 
 
